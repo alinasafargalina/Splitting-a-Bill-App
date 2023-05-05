@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split a Bill App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <h1>Let's split our bill!</h1>
+        <form>
+            <p>Bill 💰</p>
+            <span>💲
+            <input id="bill" type="text" placeholder="Bill"></span>
+            <p>Number of people</p>
+            <span><input id="people" type="text" placeholder="How many people?"></span>
+            <p>Did you like the service?</p>
+            <button id="addTip">Add a tip</button>
+            <select id="tip">
+                <option disabled>Select an option</option>
+                <option value="0.30">💗 WOW! 30% 💗</option>
+                <option value="0.20" selected>💙 Good service! 20% 💙</option>
+                <option value="0.10"> 🙂 It was OK. 10%</option>
+                <option value="0.00">No tip. Sorry!</option>
+            </select>
+            <button id="btn">Calculate</button>
+        </form>
+        
+        <div id="showTotalToPay">
+            <div id="billSplit">
+                <p>Bill</p>
+                <span>💲</span>
+                <span id="dividedBill"></span>
+                <span>Per person</span>
+            </div>
+            <div id="totalTip">
+                <p>Tip</p>
+                <span>💲</span>
+                <span id="dividedTip"></span>
+                <span>Per person</span>
+            </div>
+            <div id="totalAmount">
+                <p>Total</p>
+                <span>💲</span>
+                <span id="billAndTip"></span>
+                <span>Per person</span>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="index.js"></script>
+</body>
+</html>
